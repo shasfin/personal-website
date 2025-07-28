@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   sodipodi:docname="Annotation Templates.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.84096521"
+     inkscape:cx="-175.98826"
+     inkscape:cy="436.40331"
+     inkscape:window-width="4128"
+     inkscape:window-height="1622"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       style="fill:#f55000;stroke-width:0.383;stroke:none;fill-opacity:1"
+       id="path234"
+       cx="32.702938"
+       cy="29.810846"
+       r="14.460484" />
+    <text
+       xml:space="preserve"
+       style="font-size:22.5778px;line-height:1.1;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:#f55000;fill-opacity:1;stroke:none;stroke-width:0.383"
+       x="31.958797"
+       y="37.924744"
+       id="text1730"><tspan
+         sodipodi:role="line"
+         id="tspan1728"
+         style="font-size:22.5778px;fill:#ffffff;fill-opacity:1;stroke-width:0.383;font-weight:bold"
+         x="31.958797"
+         y="37.924744">1</tspan></text>
+    <circle
+       style="fill:#205794;fill-opacity:1;stroke:none;stroke-width:0.383"
+       id="path234-1"
+       cx="167.74161"
+       cy="29.143438"
+       r="14.460484" />
+    <text
+       xml:space="preserve"
+       style="font-size:22.5778px;line-height:1.1;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:#f55000;fill-opacity:1;stroke:none;stroke-width:0.383"
+       x="166.99747"
+       y="37.257332"
+       id="text1730-9"><tspan
+         sodipodi:role="line"
+         id="tspan1728-2"
+         style="font-weight:bold;font-size:22.5778px;fill:#ffffff;fill-opacity:1;stroke-width:0.383"
+         x="166.99747"
+         y="37.257332">1</tspan></text>
+  </g>
+</svg>

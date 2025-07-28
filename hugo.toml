@@ -1,0 +1,27 @@
+baseURL = 'https://example.org/'
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
+title = 'My New Hugo Site'
+theme = 'huguette'
+[params]
+  css = true
+[languages]
+  [languages.en]
+    languageName = "English"
+    languageCode = 'en-US'
+    disabled = false
+    weight = 1
+    contentDir = "content/en"
+  [languages.de]
+    languageName = "Deutsch"
+  languageCode = 'de-CH'
+    disabled = false
+    weight = 2
+    contentDir = "content/de"
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe =  true
+
+

@@ -1,0 +1,13 @@
+{{ define "main" }}
+
+<div class="homepage-container">
+  <h1>{{ .Title }}</h1>
+  <div class="content-container">
+    <div class="text-content">
+      <p>{{ .Content }}</p>
+    </div>
+    <img src="{{ .Params.image }}" alt="My Photo" class="profile-pic">
+  </div>
+</div>
+
+{{ end }}

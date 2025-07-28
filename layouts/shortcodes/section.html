@@ -1,0 +1,6 @@
+<details class="section-block" {{ if .Get "open" }}open{{ end }}>
+    <summary>{{ .Get "title" }}</summary>
+    <div class="section-content">
+        {{ .Inner | markdownify }}
+    </div>
+</details>
