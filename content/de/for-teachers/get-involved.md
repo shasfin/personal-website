@@ -1,7 +1,8 @@
 ---
-title: "Robotik im Unterricht – aber wie? 🤖"
+title: "🤖 Robotik im Unterricht – aber wie?"
+description: "Kurzbeschreibung des Projekts, ideal für den ersten Überblick."
 date: 2025-02-13T17:09:09+01:00
-draft: true
+draft: false
 ---
 
 
@@ -15,9 +16,17 @@ Wir bieten Ihnen eine **8-wöchige Unterrichtssequenz**, die Ihre Schüler:innen
 
 Zur Auswahl stehen **zwei spannende Lernwege**:
 
-🔹 **Track 1**: Programmierung eines fahrenden Roboters
+{{< track-cards >}}
 
-🔹 **Track 2**: Programmierung eines LED-Rings mit 24 Lichtern
+{{< track-card img="/images/robots/maqueen_plusV3.png" title="Track 1: Fahrender Roboter" track="robot">}}
+Programmierung eines fahrenden Roboters: Hindernisse umfahren und Fahrmanöver ausführen.
+{{< /track-card >}}
+
+{{< track-card img="/images/robots/LED-ring.png" title="Track 2: LED-Ring" track="led">}}
+Programmierung eines LED-Rings mit 24 Lichtern: farbige Lichtmuster, Animationen und Musik.
+{{< /track-card >}}
+
+{{< /track-cards >}}
 
 Wir möchten herausfinden, welcher Ansatz sich besser für den Unterricht eignet. Welche Schülerinnen und Schüler bevorzugen welchen Track? Welche Lernfortschritte werden erzielt? Das sind Fragen, bei denen **Sie uns helfen können**!
 
@@ -30,4 +39,4 @@ Wir möchten herausfinden, welcher Ansatz sich besser für den Unterricht eignet
 ✔ Sie geben uns ein kurzes **Feedback** zu Ihren Erfahrungen mit dem Material.
 
 📌 **Interessiert?**
-Alle Details finden Sie [hier](../Robotikprojekt-Detailinfo).
+Alle Details finden Sie [hier](../project-details).

@@ -1,0 +1,28 @@
+
+<!-- Create a menu from the "Fixed Pages" and "Menu Pages" (identified by "" and "p",
+  respectively) sections in Netlify CMS -->
+<header>
+  <nav class="navbar">
+    <div>
+      <div>
+        <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+        <ul class="nav-links">
+          <li><a href="/{{ .Lang }}">{{ i18n "home" }}</a></li>
+<!--          <li><a href="/{{ .Lang }}/research">{{ i18n "research" }}</a></li>-->
+          <li><a href="/{{ .Lang }}/for-teachers">{{ i18n "for-teachers" }}</a></li>
+          <li><a href="/{{ .Lang }}/theses">{{ i18n "supervised-theses" }}</a></li>
+        </ul>
+      </div>
+      <div>
+        <ul class="language-switcher">
+          {{ range .Translations }}
+          <li>
+            <a href="{{ .Permalink }}">{{ .Language.Lang }}</a>
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+
+  </nav>
+</header>

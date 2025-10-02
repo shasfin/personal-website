@@ -1,0 +1,6 @@
+{{ $track := .Get "track" }}
+<div class="track-card {{ $track }}">
+  <img src="{{ .Get "img" }}" alt="{{ .Get "title" }}">
+  <h4>{{ .Get "title" }}</h4>
+  <p>{{ .Inner | markdownify }}</p>
+</div>

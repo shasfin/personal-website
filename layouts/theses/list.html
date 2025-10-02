@@ -1,0 +1,9 @@
+{{ define "main" }}
+<h1>{{ i18n "supervised-theses" }}</h1>
+{{ .Content }}
+<div class="accordion">
+  {{ range .Pages.ByDate.Reverse }}
+  {{ partial "thesis-card.html" . }}
+  {{ end }}
+</div>
+{{ end }}

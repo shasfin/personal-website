@@ -1,7 +1,9 @@
-baseURL = 'https://example.org/'
-defaultContentLanguage = "en"
+baseURL = "https://people.inf.ethz.ch/amaximov/"
+relativeURLs = false
+canonifyURLs = true
+defaultContentLanguage = "de"
 defaultContentLanguageInSubdir = true
-title = 'My New Hugo Site'
+title = 'Alexandra Maximova'
 theme = 'huguette'
 [params]
   css = true
@@ -22,6 +24,8 @@ theme = 'huguette'
   defaultMarkdownHandler = "goldmark"
   [markup.goldmark]
     [markup.goldmark.renderer]
-      unsafe =  true
-
-
+      unsafe = true
+    [markup.goldmark.parser]
+      [markup.goldmark.parser.attribute]
+        block = true
+        title = true

@@ -1,0 +1,13 @@
+{{ define "main" }}
+<h1>{{ i18n "for-teachers" }}</h1>
+{{ .Content }}
+
+<div class="track-cards">
+    {{ range .Pages.ByDate.Reverse }}
+        <div class="track-card">
+            <h3><a href="{{.RelPermalink}}" target="_blank">{{ .Params.title }}</a></h3>
+            <p>{{ .Params.description }}</p>
+        </div>
+    {{ end }}
+</div>
+{{ end }}

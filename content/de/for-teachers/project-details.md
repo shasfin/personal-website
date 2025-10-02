@@ -1,15 +1,16 @@
 ---
-title: "Robotikprojekt: Detailinfo"
+title: "📋 Robotikprojekt: Detailinfo"
+description: "Alle Infos zu Ablauf, Voraussetzungen und Teilnahme."
 date: 2025-02-13T17:09:09+01:00
-draft: true
+draft: false
 ---
 
 {{< section title="Worum geht es?" open=true >}}
 
 Möchten Sie Ihre Schülerinnen und Schüler der **7. und 8. Klasse** spielerisch an die **Programmierung in Python** heranführen? In unserem Projekt erhalten Sie fertiges Unterrichtsmaterial und Unterstützung, um zwei spannende Ansätze auszuprobieren:
 
-* Programmierung eines **fahrenden Roboters** 
-* Steuerung eines **LED-Rings** mit 24 Farb-LEDs
+* Track 1: Programmierung eines **fahrenden Roboters** 
+* Track 2: Steuerung eines **LED-Rings** mit 24 Farb-LEDs
 
 Gemeinsam wollen wir herausfinden, welcher Ansatz das Interesse und Verständnis der Schülerinnen und Schüler am besten fördert. Ihre Erfahrungen und Ihr Feedback helfen uns, die besten Methoden für den Unterricht zu entwickeln – und Sie profitieren von erprobtem, praxisnahem Material für Ihre Klasse.
 
@@ -60,18 +61,17 @@ Wir unterstützen Sie während des gesamten Projekts und stehen jederzeit für F
 {{< /section >}}
 
 {{< section title="Was wird unterrichtet?" >}}
-In this section you will find the exact learning objectives for the different tracks.
-{{< collapse "Track 1: Fahrender Roboter" >}}
+In diesem Abschnitt sind die Lernziele pro Track und pro Woche aufgelistet.
+{{< collapse title="Track 1: Fahrender Roboter" track="robot">}}
 
-Here you will find the exact lerning objectives on a per-week basis for the Track Moving Robot
 
 {{< subcollapse "Woche 1 – Fahren, drehen, wiederholen" >}}
 * Die SuS verstehen, dass Programmieren bedeutet, einer Maschine präzise Anweisungen zu geben.
 * Die SuS lernen, wie sie den Roboter handhaben und wie sie Programme über USB-Kabel von WebTigerPython übertragen.
-* Die SuS lernen, was die Fahrbefehle forward, backward, left, right machen.
-* Die SuS lernen, wie sie Fahrbefehle mit sleep und stop kombinieren können, um den Maqueen Fahrsequenzen abfahren zu lassen.
-* Die SuS verstehen, was die Vorteile von repeat-Schleifen gegenüber Copy-Paste sind.
-* Die SuS setzen repeat-Schleifen gezielt ein, um Code-Vorgänge zu wiederholen.
+* Die SuS lernen, was die Fahrbefehle `forward`, `backward`, `left`, `right` machen.
+* Die SuS lernen, wie sie Fahrbefehle mit `sleep` und `stop` kombinieren können, um den Maqueen Fahrsequenzen abfahren zu lassen.
+* Die SuS verstehen, was die Vorteile von `repeat`-Schleifen gegenüber Copy-Paste sind.
+* Die SuS setzen `repeat`-Schleifen gezielt ein, um Code-Vorgänge zu wiederholen.
 {{< /subcollapse >}}
 
 {{< subcollapse "Woche 2 – Präziser fahren mit selbstdefinierten Befehlen" >}}
@@ -87,23 +87,23 @@ Here you will find the exact lerning objectives on a per-week basis for the Trac
 * Die SuS erklären, warum Bedingungen notwendig sind, um auf Benutzereingaben zu reagieren.
 * Die SuS benennen die Sensoren des fahrenden Roboters und beschreiben ihre Funktionen.
 * Die SuS erklären, wie der Ultraschallsensor funktioniert.
-* Die SuS wenden die Vergleichsoperatoren (<. <=, ==, >=, >, !=) in Python korrekt an, um Sensorwerte mit Referenzwerten zu vergleichen.
-* Die SuS werten logische Aussagen aus (z.B. getDistance() < 50) und sagen vorher, wann sie wahr oder falsch sind.
+* Die SuS wenden die Vergleichsoperatoren (`<`, `<=`, `==`, `>=`, `>`, `!=`) in Python korrekt an, um Sensorwerte mit Referenzwerten zu vergleichen.
+* Die SuS werten logische Aussagen aus (z.B. `getDistance() < 50`) und sagen vorher, wann sie wahr oder falsch sind.
 * Die SuS erklären, wie der Infrarotsensor funktioniert.
 * Die SuS finden experimentell heraus, welche Werte der Infrarotsensor auf unterschiedlichen Oberflächen liefert.
 {{< /subcollapse >}}
 
 {{< subcollapse "Woche 4 – Alternativen angeben und Linien folgen" >}}
-* Die SuS erklären, warum ein else-Block notwendig ist, um alternative Aktionen bei nicht erfüllter Bedingung auszuführen.
-* Die SuS analysieren den Unterschied zwischen Code mit und ohne else-Verzweigung und beschreiben Auswirkungen auf das Programmverhalten.
-* Die SuS erklären, warum die Reihenfolge der Bedingungen in if-elif-else-Konstrukten entscheidend ist.
-* Die SuS vergleichen Programme mit unterschiedlicher elif-Reihenfolge und sagen vorher, wie sie sich in verschiedenen Szenarien verhalten.
-* Die SuS wenden if-elif-else-Konstrukten gezielt ein, um mithilfe der Infrarotsensoren einer Linie zu folgen.
+* Die SuS erklären, warum ein `else`-Block notwendig ist, um alternative Aktionen bei nicht erfüllter Bedingung auszuführen.
+* Die SuS analysieren den Unterschied zwischen Code mit und ohne `else`-Verzweigung und beschreiben Auswirkungen auf das Programmverhalten.
+* Die SuS erklären, warum die Reihenfolge der Bedingungen in `if`-`elif`-`else`-Konstrukten entscheidend ist.
+* Die SuS vergleichen Programme mit unterschiedlicher `elif`-Reihenfolge und sagen vorher, wie sie sich in verschiedenen Szenarien verhalten.
+* Die SuS wenden `if`-`elif`-`else`-Konstrukten gezielt ein, um mithilfe der Infrarotsensoren einer Linie zu folgen.
 {{< /subcollapse >}}
 
 {{< subcollapse "Woche 5 – Werte speichern mit Variablen" >}}
 * Die SuS erklären, warum Variablen notwendig sind, um Sensorwerte mehrfach zu nutzen.
-* Die SuS identifizieren Fehler in Programmen, die durch fehlende Variablen entstehen, z.B. doppelte Abfrage von random.randint.
+* Die SuS identifizieren Fehler in Programmen, die durch fehlende Variablen entstehen, z.B. doppelte Abfrage von `random.randint`.
 * Die SuS setzen in ihren Programmen Variablen gezielt ein, um Sensormessungen zu speichern, z.B. Distanzmessungen, um zu entscheiden, ob der Roboter nach links oder nach rechts fahren soll.
 * Die SuS führen Berechnungen mit Sensordaten durch.
 {{< /subcollapse >}}
@@ -116,22 +116,20 @@ Here you will find the exact lerning objectives on a per-week basis for the Trac
 
 {{< /collapse >}}
 
-{{< collapse "Track 2: LED-Ring" >}}
-
-Here you will find the exact lerning objectives on a per-week basis for the Track LED Ring
+{{< collapse title="Track 2: LED-Ring" track="led">}}
 
 {{< subcollapse "Woche 1 – Musik und Wiederholungen" >}}
 * Die SuS verstehen, dass Programmieren bedeutet, einer Maschine präzise Anweisungen zu geben.
 * Die SuS lernen, wie sie den micro:bit verbinden und wie sie Programme über USB-Kabel von WebTigerPython übertragen.
-* SuS benennen, wofür die Parameter von pitch zuständig sind (Tonhöhe und Tondauer).
-* SuS setzen repeat-Schleifen gezielt ein, um Code-Vorgänge zu wiederholen.
+* SuS benennen, wofür die Parameter von `pitch` zuständig sind (Tonhöhe und Tondauer).
+* SuS setzen `repeat`-Schleifen gezielt ein, um Code-Vorgänge zu wiederholen.
 * SuS erkennen anhand der Einrückung, welche Codeblöcke in einer Schleife wiederholt werden.
-* Die SuS erkennen sich wiederholende Muster in Liedern und können diese als repeat-Schleife umsetzen.
+* Die SuS erkennen sich wiederholende Muster in Liedern und können diese als `repeat`-Schleife umsetzen.
 {{< /subcollapse >}}
 
 {{< subcollapse "Woche 2 – Regenbogenmusik" >}}
 * Die SuS beschreiben, wie die additive Farbmischung funktioniert.
-* Die SuS nutzen den Befehl fill(r, g, b), um eine Farbe auf dem LED-Ring anzuzeigen.
+* Die SuS nutzen den Befehl `fill(r, g, b)`, um eine Farbe auf dem LED-Ring anzuzeigen.
 * Die SuS erklären, warum Funktionen nützlich sind, um Code-Blöcke wiederzuverwenden.
 * Die SuS definieren syntaktisch korrekte Funktionen in Python.
 * Die SuS rufen selbstdefinierte Funktionen in ihrem Code auf.
@@ -142,29 +140,29 @@ Here you will find the exact lerning objectives on a per-week basis for the Trac
 * Die SuS erklären, warum Bedingungen notwendig sind, um auf Benutzereingaben zu reagieren.
 * Die SuS benennen die Sensoren des micro:bits und beschreiben ihre Funktionen.
 * Die SuS nutzen eine Endlosschleife, um kontinuierlich auf Eingaben zu reagieren.
-* Die SuS wenden die Vergleichsoperatoren (<, <=, ==, >=, >, !=) in Python an, um Sensorwerte mit Referenzwerten zu vergleichen.
-* Die SuS werten logische Aussagen (z.B. display.read_light_level() < 50) und sagen vorher, wann sie wahr oder falsch sind.
+* Die SuS wenden die Vergleichsoperatoren (`<`, `<=`, `==`, `>=`, `>`, `!=`) in Python an, um Sensorwerte mit Referenzwerten zu vergleichen.
+* Die SuS werten logische Aussagen (z.B. `display.read_light_level() < 50`) und sagen vorher, wann sie wahr oder falsch sind.
 {{< /subcollapse >}}
 
 {{< subcollapse "Woche 4 – Alternativen angeben" >}}
-* Die SuS erklären, warum ein else-Block notwendig ist, um alternative Aktionen bei nicht erfüllter Bedingung auszuführen.
-* Die SuS analysieren den Unterschied zwischen Code mit und ohne else-Verzweigung und beschreiben Auswirkungen auf das Programmverhalten.
-* Die SuS erklären, warum die Reihenfolge der Bedingungen in if-elif-else-Konstrukten entscheidend ist.
-* Die SuS vergleichen Programme mit unterschiedlicher elif-Reihenfolge und sagen vorher, wie sie sich in verschiedenen Szenarien verhalten.
+* Die SuS erklären, warum ein `else`-Block notwendig ist, um alternative Aktionen bei nicht erfüllter Bedingung auszuführen.
+* Die SuS analysieren den Unterschied zwischen Code mit und ohne `else`-Verzweigung und beschreiben Auswirkungen auf das Programmverhalten.
+* Die SuS erklären, warum die Reihenfolge der Bedingungen in `if`-`elif`-`else`-Konstrukten entscheidend ist.
+* Die SuS vergleichen Programme mit unterschiedlicher `elif`-Reihenfolge und sagen vorher, wie sie sich in verschiedenen Szenarien verhalten.
 {{< /subcollapse >}}
 
 {{< subcollapse "Woche 5 – Werte speichern mit Variablen" >}}
 * Die SuS erklären, warum Variablen notwendig sind, um Sensorwerte mehrfach zu nutzen.
-* Die SuS identifizieren Fehler in Programmen, die durch fehlende Variablen entstehen, z.B. doppelte Abfrage von get_presses oder random.randint.
+* Die SuS identifizieren Fehler in Programmen, die durch fehlende Variablen entstehen, z.B. doppelte Abfrage von `get_presses` oder `random.randint`.
 * Die SuS setzen in ihren Programmen Variablen gezielt ein, um Sensormessungen zu speichern.
-* Die SuS setzen Variablen und randint ein, um einen digitalen Würfel zu programmieren.
+* Die SuS setzen Variablen und `randint` ein, um einen digitalen Würfel zu programmieren.
 * Die SuS führen Berechnungen mit Sensordaten durch.
 {{< /subcollapse >}}
 
-{{< subcollapse "Woche 6 – Variablen… verändern" >}}
+{{< subcollapse "Woche 6 – Variablen… verändern">}}
 * Die SuS benennen die Indizes der LEDs (0-23) und lokalisieren diese auf dem LED-Ring.
-* Die SuS steuern einzelne LEDs mit set_led(index, r, g, b) an und sagen vorher, welche leuchtet.
-* Die SuS erkennen, dass repetitive Befehle (z.B. set_led(0, 255, 0, 0); set_led(1, 255, 0, 0); set_led(2, 255, 0, 0);…) ohne Variablen ineffizient sind.
+* Die SuS steuern einzelne LEDs mit `set_led(index, r, g, b)` an und sagen vorher, welche leuchtet.
+* Die SuS erkennen, dass repetitive Befehle (z.B. `set_led(0, 255, 0, 0); set_led(1, 255, 0, 0); set_led(2, 255, 0, 0);…`) ohne Variablen ineffizient sind.
 * Die SuS setzen Variablen als Zähler gezielt ein, z.B. bei Lauflichtern und Farbverläufen.
 {{< /subcollapse >}}
 
@@ -177,32 +175,45 @@ Here you will find the exact lerning objectives on a per-week basis for the Trac
 Für das Projekt benötigen Sie:
 
 * **Hardware** (pro Schülerin oder Schüler):
-  1. micro:bit
-  1. Maqueen-Roboter (Track 1) oder LED-Ring (Track 2)
-  1. Micro-USB-Kabel
-  1. Batteriefach für 3 AAA-Batterien (nur für Track 2)
-  1. Batterien oder Akkus (Menge und Typ abhängig vom Roboter)
-  1. Laptops oder Android-Tablets (**keine iPads**, da WebUSB nicht unterstützt wird)
+
+{{< track-cards >}}
+
+{{< track-card img="/images/robots/maqueen_plusV3_flat_layout.png" title="Track 1: Fahrender Roboter" track="robot">}}
+1. micro:bit
+1. Maqueen Plus V3 Roboter
+1. Micro-USB-Kabel
+1. Laptops oder Android-Tablets (**keine iPads**, da WebUSB auf iPads nicht unterstützt wird)
+1. Passende Batterien
+{{< /track-card >}}
+
+{{< track-card img="/images/robots/led_ring_flat_layout.png" title="Track 2: LED-Ring" track="led">}}
+1. micro:bit
+1. LED-Ring (Track 2)
+1. Micro-USB-Kabel
+1. Laptops oder Android-Tablets (**keine iPads**, da WebUSB auf iPads nicht unterstützt wird)
+1. 3 AAA-Batterien
+1. Batteriefach für 3 AAA-Batterien
+{{< /track-card >}}
+
+{{< /track-cards >}}
+
+
 * **Software**:
   * Browser: Google Chrome
   * Programmierumgebung: [WebTigerPython](https://webtigerpython.ethz.ch/)
 * **Fehlende Ausstattung?** Kein Problem — wir finden gemeinsam eine Lösung.
 
 
-<div class="image-row">
-  <img src="/images/robots/maqueen_lite_flat_layout.png" alt="Track 1" />
-  <img src="/images/robots/led_ring_flat_layout.png" alt="Track 2" />
-</div>
-
 {{< /section >}}
 
 {{< section title="Vergleich der Tracks" >}}
 
-| Aspekt | Track 1: Fahrender Roboter                                                   | Track 2: LED-Ring                                             |
-|--------|------------------------------------------------------------------------------|---------------------------------------------------------------|
-| **Hardware** | ![Maqueen Lite](/images/robots/maqueen_lite.png) micro:bit + Maqueen-Roboter | ![LED-Ring](/images/robots/LED-ring.png) micro:bit + LED-Ring |
-| **Programmierkonzepte** | Schleifen, Funktionen, Bedingungen, Variablen                                | Schleifen, Funktionen, Bedingungen, Variablen                 |
-| **Praktische Anwendung** | Roboter steuern (z.B. Hindernisse umfahren)                                  | Musik, Lichtmuster, Animationen und einfache Spiele erstellen |
+| Aspekt | Track 1: Fahrender Roboter                                                        | Track 2: LED-Ring                                             |
+|--------|-----------------------------------------------------------------------------------|---------------------------------------------------------------|
+| **Hardware** | ![Maqueen Plus V3](/images/robots/maqueen_plusV3.png) micro:bit + Maqueen-Roboter | ![LED-Ring](/images/robots/LED-ring.png) micro:bit + LED-Ring |
+| **Programmierkonzepte** | Schleifen, Funktionen, Bedingungen, Variablen                                     | Schleifen, Funktionen, Bedingungen, Variablen                 |
+| **Praktische Anwendung** | Roboter steuern (z.B. Hindernisse umfahren)                                       | Musik, Lichtmuster, Animationen und einfache Spiele erstellen |
+{.robot-led-table}
 
 {{< /section >}}
 

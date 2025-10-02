@@ -1,4 +1,5 @@
-<details class="collapse-block">
-    <summary>{{ .Get 0 }}</summary>
+{{ $track := .Get "track" }}
+<details class="collapse-block {{ $track }}">
+    <summary>{{ .Get "title" }}</summary>
     <div>{{ .Inner | markdownify }}</div>
 </details>

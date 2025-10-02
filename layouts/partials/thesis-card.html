@@ -1,0 +1,21 @@
+<details class="collapse-block thesis">
+  <summary>
+    <div>
+      <strong>{{ .Title }}</strong> – {{ .Params.author }} ({{ .Params.semester }})
+    </div>
+  </summary>
+
+  <div class="thesis-details">
+    <p><em>{{ .Params.type }}</em></p>
+    <p><strong>{{ i18n "supervisor" }}:</strong> {{ .Params.supervisor }}</p>
+    <p><strong>{{ i18n "professor" }}:</strong> {{ .Params.professor }}</p>
+
+    {{ if .Params.pdf }}
+    <p><a href="../../{{ .Params.pdf }}" target="_blank">📄 PDF</a></p>
+    {{ end }}
+
+    <div class="thesis-description">
+      {{ .Content }}
+    </div>
+  </div>
+</details>

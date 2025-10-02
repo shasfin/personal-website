@@ -27,6 +27,8 @@ Table of Contents:
 	--cmed:  #d1d1d1;
 	--clink: #07c;
 	--cemph: #088;    --cemphbg: #0881;
+	--crobot: #205794; --crobot-light: #e6f0fa;
+	--cled: #f55000; --cled-light: #fff4e6;
 }
 
 
@@ -97,7 +99,10 @@ thead th[colspan] { padding: .2em 0.8em; text-align: center; }
 thead tr:not(:only-child) td { padding: .2em 0.8em; }
 thead+tbody tr:first-child td { border-top: 0.1rem  solid var(--cdark);  }
 tr:hover{ background-color: var(--clight); }
-table img { display: block; }
+table img {
+	display: block;
+	border-radius: 6px;
+}
 
 /* figures */
 img, svg { max-width: 100%; vertical-align: text-top; object-fit: cover; }
@@ -434,7 +439,7 @@ p>select { padding: 0;      margin: 0 .5em; }
 .m-1, .my-1, .mt-1 { margin-top:    1.0rem !important; }
 .m-1, .my-1, .mb-1 { margin-bottom: 1.0rem !important; }
 
-/* pading */
+/* padding */
 .p-0 { padding: 0 !important; }
 .p-1, .px-1, .pr-1 { padding-right:  1.0rem !important; }
 .p-1, .px-1, .pl-1 { padding-left:   1.0rem !important; }
@@ -561,16 +566,17 @@ p>select { padding: 0;      margin: 0 .5em; }
 	text-decoration: underline;
 }
 
-/* Level 2 collapsibles: Tracks */
+/* Base collapsible (neutral) */
 .collapse-block {
-	background-color: #e9e9e9;
-	border-left: 4px solid #bbb;
 	margin: 0 0 0.75rem 0;
 	padding: 0;
 	border-radius: 4px;
 	overflow: hidden;
+	border: none; /* remove container border */
+	background: transparent; /* keep background neutral */
 }
 
+/* Title bar */
 .collapse-block summary {
 	font-size: 1.2rem;
 	font-weight: 500;
@@ -580,8 +586,8 @@ p>select { padding: 0;      margin: 0 .5em; }
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	background-color: #dcdcdc;
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid var(--cmed);
+	background-color: var(--clight); /* default neutral */
 	color: #333;
 }
 
@@ -598,69 +604,223 @@ p>select { padding: 0;      margin: 0 .5em; }
 
 .collapse-block[open] summary::after {
 	content: "–";
-	transform: rotate(0deg);
 }
 
+/* Inner content */
 .collapse-block > *:not(summary) {
 	padding: 0.75rem 1rem;
 	font-size: 0.95rem;
-	color: #444;
 	line-height: 1.5;
+	background: #fff; /* ensure neutral readable background */
+}
+
+/* === Track-specific styles === */
+
+/* Robot track */
+.collapse-block.robot {
+	background-color: var(--crobot-light);
+	border-left: 4px solid var(--crobot);
+}
+
+.collapse-block.robot summary {
+	background-color: var(--crobot-light);
+	color: var(--crobot);
+}
+
+/* LED track */
+.collapse-block.led {
+	background-color: var(--cled-light);
+	border-left: 4px solid var(--cled);
+}
+
+.collapse-block.led summary {
+	background-color: var(--cled-light);
+	color: var(--cled);
+}
+
+/* Nested collapsibles (weeks) inherit track color of parent) */
+.collapse-block.robot .collapse-block summary {
+	background-color: var(--crobot-light);
+	color: var(--crobot);
+	border-left: 3px solid var(--crobot);
+	font-size: 1rem;
+}
+
+.collapse-block.led .collapse-block summary {
+	background-color: var(--cled-light);
+	color: var(--cled);
+	border-left: 3px solid var(--cled);
+	font-size: 1rem;
+}
+
+.collapse-block.robot summary,
+.collapse-block.robot[open] summary {
+	box-shadow: none;
+}
+
+.collapse-block.led summary,
+.collapse-block.led[open] summary {
+	box-shadow: none;
+}
+
+/* Collapsible for theses titles (smaller font) */
+.collapse-block.thesis summary {
+	font-size: 1rem;
+}
+
+.collapse-block.thesis summary strong {
+	font-weight: bold;
 }
 
 
-/* Level 3 collapsibles: Weekly Objectives */
-.sub-collapse-block {
-	background-color: var(--cbg);
-	border-left: 4px solid #aaa;
-	margin: 0 0 0.75rem 0;
-	padding: 0;
-	border-radius: 4px;
+/*Cards to display the tracks in the short description*/
+.track-cards {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+	justify-content: center;
+}
+
+.track-card {
+	flex: 1 1 300px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	padding: 1rem;
+	text-align: center;
+	background: #fafafa;
+}
+
+.track-card img {
+	max-width: 100%;
+	border-radius: 6px;
+	margin-bottom: 0.5rem;
+}
+
+/* Track color themes */
+.track-card.robot {
+	background: var(--crobot-light);   /* light washed-out blue */
+	border-color: var(--crobot); /* strong blue */
+}
+
+.track-card.robot h4 {
+	color: var(--crobot);
+}
+
+.track-card.led {
+	background: var(--cled-light);   /* light washed-out orange */
+	border-color: var(--cled); /* strong orange */
+}
+
+.track-card.led h4 {
+	color: var(--cled);
+}
+
+/* Scope only to tables with class "robot-led-table" */
+.robot-led-table td:first-child,
+.robot-led-table th:first-child {
+	background-color: var(--clight);
+	width: 20%;
+}
+
+/* Set background-color of robot and led cells. */
+.robot-led-table td:nth-child(2),
+.robot-led-table th:nth-child(2) {
+	background-color: var(--crobot-light);
+}
+
+.robot-led-table td:nth-child(3),
+.robot-led-table th:nth-child(3) {
+	background-color: var(--cled-light);
+}
+
+/* Colored column headers */
+.robot-led-table th:nth-child(2) {
+	color: var(--crobot);
+}
+
+.robot-led-table th:nth-child(3) {
+	color: var(--cled);
+}
+
+/* Optional lighter background for body cells */
+.robot-led-table td:nth-child(2) {
+	background-color: color-mix(in srgb, var(--crobot-light) 70%, white);
+}
+
+.robot-led-table td:nth-child(3) {
+	background-color: color-mix(in srgb, var(--cled-light) 70%, white);
+}
+
+/* General table styling */
+.robot-led-table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 1.5rem 0;
+	border-radius: 8px;
 	overflow: hidden;
 }
 
-.sub-collapse-block summary {
-	font-size: 1rem;
-	font-weight: 500;
-	padding: 0.25rem 0.75rem;
+.robot-led-table td,
+.robot-led-table th {
+	padding: 0.75rem;
+	border-bottom: 1px solid var(--cmed);
+	vertical-align: top;
+}
+
+.robot-led-table img {
+	height: fit-content;
+	margin-bottom: 0.5rem;
+}
+
+
+/* Thesis cards */
+.thesis-card {
+	border: 1px solid var(--cmed);
+	border-radius: 10px;
+	margin: 1rem 0;
+	padding: 0.5rem 1rem;
+	background: var(--clight);
+}
+
+.thesis-card summary {
 	cursor: pointer;
-	list-style: none;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	background-color: #efefef;
-	border-bottom: 1px solid #ddd;
-	color: var(--cfg);
-}
-
-.sub-collapse-block summary::after {
-	content: "+";
 	font-weight: bold;
-	font-size: 1rem;
-	margin-left: 0.5rem;
-	transition: transform 0.2s ease;
 }
 
-.sub-collapse-block[open] summary::after {
-	content: "–";
-	transform: rotate(0deg);
+.thesis-card[open] {
+	box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-.sub-collapse-block > *:not(summary) {
-	padding: 0.25rem 0;
-	font-size: 0.9rem;
-	color: var(--cfg);
-	line-height: 1.5;
+.thesis-details {
+	margin-top: 0.5rem;
 }
 
-/*For displaying images side-by-side*/
-.image-row {
+/* Trying out landing page for teachers */
+.track-split {
 	display: flex;
-	gap: 1rem;
-	justify-content: space-between;
 	flex-wrap: wrap;
 }
-.image-row img {
-	width: 48%;
+
+.track {
+	flex: 1 1 50%;
+	text-align: center;
+	padding: 1rem;
+	padding-bottom: 1rem;
+}
+
+.track-robot {
+	background-color: var(--crobot-light); /* blue */
+	color: var(--crobot)
+}
+
+.track-led {
+	background-color: var(--cled-light); /* orange */
+	color: var(--cled)
+}
+
+.track img {
+	max-width: 80%;
 	height: auto;
+	margin-top: 0.5rem;
+	border-radius: 6px;
 }
